@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de intereses básicos</title>
+</head>
+
+<body>
+    <main class="calculator">
+        <form action="" class="form">
+            <label for="inputCapital" class="form__label form__label--capital">Capital</label>
+            <input type="number" class="form__input form__input--capital" id="inputCapital" value="0">
+            <label for="" class="form__label form__label--percentage">Selecciona % de interes</label>
+            <div for=" form__porcentage-container">
+                <button class="button" class="btn btn--porcentage" id="btnPorcentXSmall">5%</button>
+                <button class="button" class="btn btn--porcentage" id="btnPorcentSmall">10%</button>
+                <button class="button" class="btn btn--porcentage" id="btnPorcentNormal">15%</button>
+                <button class="button" class="btn btn--porcentage" id="btnPorcentBig">25%</button>
+                <button class="button" class="btn btn--porcentage" id="btnPorcentXBig">50%</button>
+                <button class="button" class="btn btn--custom" id="btnCustom">Custom</button>
+            </div>
+            <label for="inputTime" class="form__label form__label--time">Tiempo de pago</label>
+            <input type="number" class="form__input form__input--time" id="inputTime" value="0">
+        </form>
+        <div class="result">
+            <div class="result__container-results">
+                <span class="result__label">Interes a pagar</span>
+                <span class="result__monto" id="resultInteres">$0.00</span>
+                <span class="result__label">Total a pagar</span>
+                <span class="result__monto" id="resultMontoTotal">$0.00</span>
+            </div>
+            <button class="btn btn--reset">Reset</button>
+        </div>
+    </main>
+</body>
+
+</html>
