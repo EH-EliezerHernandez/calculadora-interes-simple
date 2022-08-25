@@ -10,9 +10,7 @@
   padding: 32px;
   background-color: selecColorBg(white);
   border-radius: 16px;
-}
-@media (min-width: 550px) {
-  .calculator {
+  @include media(tablet) {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 }

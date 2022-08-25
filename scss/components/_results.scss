@@ -1,0 +1,27 @@
+/*********************************\
+        $RESULTS
+\*********************************/
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 24px;
+  background-color: selecColorBg(very-dark-cyan);
+  border-radius: 16px;
+  &__container-results {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    font-size: selecFontSize(x-small);
+    font-weight: selecFontWeight(bold);
+    color: selecColorText(white);
+  }
+  &__monto {
+    font-size: selecFontSize(big);
+    font-weight: selecFontWeight(bold);
+    color: selecColorText(primary-strong-cyan);
+    text-align: right;
+  }
+}

@@ -27,3 +27,7 @@
 @function selecColorBorder($color-label) {
   @return map-get($colors-border, $color-label);
 }
+
+@function selecMediaQuery($media-label) {
+  @return map-get($medias, $media-label);
+}

@@ -20,21 +20,23 @@
             <form action="" class="form">
                 <label for="inputCapital" class="form__label form__label--capital">Capital</label>
                 <div class="form__input-container form__input-container--dollar">
-                    <input type="number" class="form__input form__input--capital" id="inputCapital" value="0.00">
+                    <input type="number" class="form__input form__input--capital" id="inputCapital" placeholder="0">
                 </div>
-
-                <label for="" class="form__label form__label--percentage">Selecciona % de interes</label>
-                <div class=" form__porcentage-container">
-                    <button type="button" class="btn btn--porcentage" id="btnPorcentXSmall">5%</button>
-                    <button type="button" class="btn btn--porcentage" id="btnPorcentSmall">10%</button>
-                    <button type="button" class="btn btn--porcentage" id="btnPorcentNormal">15%</button>
-                    <button type="button" class="btn btn--porcentage" id="btnPorcentBig">25%</button>
-                    <button type="button" class="btn btn--porcentage" id="btnPorcentXBig">50%</button>
-                    <button type="button" class="btn btn--custom" id="btnCustom">Custom</button>
-                </div>
+                <fieldset>
+                    <legend class="form__label form__label--percentage">Selecciona % de interes</legend>
+                    <div class=" form__porcentage-container">
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentXSmall">5%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentSmall">10%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentNormal">15%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentBig">25%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentXBig">50%</button>
+                        <input type="number" class="form__input form__input--custom" id="inputCustom"
+                            placeholder="Custom">
+                    </div>
+                </fieldset>
                 <label for="inputTime" class="form__label form__label--time">Tiempo de pago</label>
                 <div class="form__input-container form__input-container--clock">
-                    <input type="number" class="form__input form__input--time" id="inputTime" value="0.00">
+                    <input type="number" class="form__input form__input--time" id="inputTime" placeholder="0">
                 </div>
             </form>
             <div class="result">

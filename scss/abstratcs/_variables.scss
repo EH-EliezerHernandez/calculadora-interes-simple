@@ -53,5 +53,8 @@ $fonts-weight: (
 
 /*---------MEDIA QUERYS-------*/
 
-$media-Mobile: 375px;
-$media-Desktop: 1440px;
+$medias: (
+  mobile: 375px,
+  tasble: 550px,
+  Desktop: 1440px,
+);

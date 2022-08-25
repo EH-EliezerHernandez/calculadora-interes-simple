@@ -8,3 +8,18 @@
   font-size: $size-REM;
   line-height: $size-REM * 1.5;
 }
+
+@mixin button-style {
+  padding: 6px 0;
+  border: none;
+  font-weight: selecFontWeight(bold);
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@mixin media($media-label) {
+  @media (min-width: selecMediaQuery($media-label)) {
+    @content;
+  }
+}

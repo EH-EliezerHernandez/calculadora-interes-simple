@@ -51,6 +51,17 @@ a {
   text-decoration: none;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
 /*********************************\
         $CALCULATORS
 \*********************************/
@@ -66,13 +77,13 @@ a {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 16px;
 }
-
-@media (min-width: 550px) {
+@media (min-width: ) {
   .calculator {
     -ms-grid-columns: (minmax(100px, 1fr))[2];
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 }
+
 /*********************************\
         $BOTONES
 \*********************************/
@@ -87,10 +98,6 @@ a {
 .btn--porcentage {
   color: hsl(189deg, 41%, 97%);
   background-color: hsl(183deg, 100%, 15%);
-}
-.btn--custom {
-  color: hsl(186deg, 14%, 43%);
-  background-color: hsl(189deg, 41%, 97%);
 }
 .btn--reset {
   font-size: 1.4rem;
@@ -191,7 +198,7 @@ a {
 }
 .form__input {
   width: 100%;
-  padding: 6px;
+  padding: 6px 12px;
   border: none;
   position: relative;
   font-size: 1.8rem;
@@ -206,21 +213,60 @@ a {
 .form__input:last-of-type {
   margin-bottom: 0;
 }
+.form__input::-webkit-input-placeholder {
+  color: rgba(0, 73, 77, 0.4);
+}
+.form__input::-moz-placeholder {
+  color: rgba(0, 73, 77, 0.4);
+}
+.form__input:-ms-input-placeholder {
+  color: rgba(0, 73, 77, 0.4);
+}
+.form__input::-ms-input-placeholder {
+  color: rgba(0, 73, 77, 0.4);
+}
+.form__input::placeholder {
+  color: rgba(0, 73, 77, 0.4);
+}
+.form__input--custom {
+  padding: 6px 0;
+  border: none;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: hsl(189deg, 41%, 97%);
+}
+.form__input--custom::-webkit-input-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+.form__input--custom::-moz-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+.form__input--custom:-ms-input-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+.form__input--custom::-ms-input-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+.form__input--custom::placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
 .form__porcentage-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(auto, 1fr) 12px minmax(auto, 1fr);
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  -ms-grid-columns: minmax(100px, 1fr) 12px minmax(100px, 1fr);
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
   gap: 12px;
   margin-bottom: 24px;
 }
-
 @media (min-width: 375px) {
   .form__porcentage-container {
-    -ms-grid-columns: (minmax(auto, 1fr))[3];
-    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    -ms-grid-columns: (minmax(60px, 1fr))[3];
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
   }
 }
+
 /*********************************\
         $MAINS
 \*********************************/

@@ -41,7 +41,7 @@
   }
   &__input {
     width: 100%;
-    padding: 6px;
+    padding: 6px 12px;
     border: none;
     position: relative;
     font-size: selecFontSize(normal);
@@ -56,17 +56,25 @@
   &__input:last-of-type {
     margin-bottom: 0;
   }
+  &__input::placeholder {
+    color: rgba(selecColorText(very-dark-cyan), 0.4);
+  }
+  &__input--custom {
+    @include button-style;
+    background-color: selecColorBg(very-light-grayish-cyan);
+  }
+  &__input--custom::placeholder {
+    color: selecColorText(dark-grayish-cyan);
+  }
   &__porcentage-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
     gap: 12px;
     margin-bottom: 24px;
   }
-}
-@media (min-width: 375px) {
-  .form {
+  @include media(mobile) {
     &__porcentage-container {
-      grid-template-columns: repeat(3, minmax(auto, 1fr));
+      grid-template-columns: repeat(3, minmax(60px, 1fr));
     }
   }
 }

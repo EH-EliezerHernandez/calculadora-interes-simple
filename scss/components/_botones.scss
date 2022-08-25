@@ -2,20 +2,12 @@
         $BOTONES
 \*********************************/
 .btn {
-  padding: 6px 0;
-  border: none;
-  font-weight: selecFontWeight(bold);
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
+  @include button-style;
   &--porcentage {
     color: selecColorText(very-light-grayish-cyan);
     background-color: selecColorBg(very-dark-cyan);
   }
-  &--custom {
-    color: selecColorText(dark-grayish-cyan);
-    background-color: selecColorBg(very-light-grayish-cyan);
-  }
+
   &--reset {
     font-size: selecFontSize(small);
     text-transform: uppercase;
