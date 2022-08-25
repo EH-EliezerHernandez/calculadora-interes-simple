@@ -1,0 +1,25 @@
+/*********************************\
+        $FUNCTIONS
+\*********************************/
+
+@function calcularREM($size-px) {
+  $size: $size-px / 16px;
+  $size-REM: $size * 1rem;
+  @return $size-REM;
+}
+
+@function selecFontSize($size-label) {
+  @return map-get($font-sizes, $size-label);
+}
+
+@function selecColorText($color-label) {
+  @return map-get($colors-text, $color-label);
+}
+
+@function selecFontWeight($weight-label) {
+  @return map-get($fonts-weight, $weight-label);
+}
+
+@function selecColorBg($color-label) {
+  @return map-get($colors-background, $color-label);
+}

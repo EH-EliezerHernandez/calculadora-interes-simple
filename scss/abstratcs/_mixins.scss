@@ -1,0 +1,10 @@
+/*********************************\
+        $MIXINS
+\*********************************/
+
+@mixin font-size($size-label) {
+  $size-px: selecFontSize($size-label);
+  $size-REM: calcularREM($size-px);
+  font-size: $size-REM;
+  line-height: $size-REM * 1.5;
+}
