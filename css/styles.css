@@ -21,6 +21,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -34,6 +35,7 @@ html {
 
 body {
   font-family: "Space Mono", monospace;
+  font-size: 16px;
 }
 
 picture {
@@ -90,6 +92,54 @@ a {
   color: hsl(186deg, 14%, 43%);
   background-color: hsl(189deg, 41%, 97%);
 }
+.btn--reset {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.btn--inactive {
+  color: hsl(183deg, 100%, 15%);
+  background-color: rgba(38, 192, 171, 0.2);
+}
+
+/*********************************\
+        $RESULTS
+\*********************************/
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  padding: 24px 24px;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 16px;
+}
+.result__container-results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.result__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+}
+.result__monto {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(172deg, 67%, 45%);
+  text-align: right;
+}
 
 /*********************************\
         $FORMS
@@ -144,7 +194,7 @@ a {
   padding: 6px;
   border: none;
   position: relative;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: right;
   color: hsl(183deg, 100%, 15%);

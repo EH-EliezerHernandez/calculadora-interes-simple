@@ -16,4 +16,12 @@
     color: selecColorText(dark-grayish-cyan);
     background-color: selecColorBg(very-light-grayish-cyan);
   }
+  &--reset {
+    font-size: selecFontSize(small);
+    text-transform: uppercase;
+  }
+  &--inactive {
+    color: selecColorText(very-dark-cyan);
+    background-color: rgba(selecColorBg(primary-strong-cyan), 0.2);
+  }
 }

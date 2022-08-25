@@ -18,6 +18,7 @@ $colors-text: (
   very-dark-cyan: $color-very-dark-cyan,
   dark-grayish-cyan: $color-dark-grayish-cyan,
   very-light-grayish-cyan: $color-very-light-grayish-cyan,
+  white: $color-White,
 );
 
 /*---------COLORS BACKGROUND-------*/
@@ -27,6 +28,7 @@ $colors-background: (
   light-grayish-cyan: $color-light-grayish-cyan,
   white: $color-White,
   very-light-grayish-cyan: $color-very-light-grayish-cyan,
+  grayish-cyan: $color-grayish-cyan,
 );
 
 /*---------COLORS BORDER-------*/
@@ -38,9 +40,10 @@ $font-primary: "Space Mono", monospace;
 
 /*---------FONT SIZES-------*/
 $font-sizes: (
-  x-small: 12px,
-  normal: 18px,
-  big: 24px,
+  x-small: 1.2rem,
+  small: 1.4rem,
+  normal: 1.8rem,
+  big: 2.4rem,
 );
 
 /*---------FONT WEIGHTS-------*/
