@@ -23,3 +23,7 @@
 @function selecColorBg($color-label) {
   @return map-get($colors-background, $color-label);
 }
+
+@function selecColorBorder($color-label) {
+  @return map-get($colors-border, $color-label);
+}

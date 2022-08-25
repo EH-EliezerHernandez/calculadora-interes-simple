@@ -1,0 +1,72 @@
+/*********************************\
+        $FORMS
+\*********************************/
+.form {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: selecFontWeight(bold);
+    color: $color-dark-grayish-cyan;
+  }
+  &__input-container {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  &__input-container:last-of-type {
+    margin-bottom: 0;
+  }
+  &__input-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 12px;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+  }
+  &__input-container--dollar::before {
+    background-image: url(../../assets/icons/icon-dollar.svg);
+  }
+  &__input-container--clock::before {
+    width: 12px;
+    height: 12px;
+    font-weight: 700;
+    background-image: url(../../assets/icons/relog.svg);
+    opacity: 0.4;
+  }
+  &__input {
+    width: 100%;
+    padding: 6px;
+    border: none;
+    position: relative;
+    font-size: selecFontSize(normal);
+    font-weight: selecFontWeight(bold);
+    text-align: right;
+    color: selecColorText(very-dark-cyan);
+    outline-color: selecColorBorder(primary-strong-cyan);
+    background-color: selecColorBg(very-light-grayish-cyan);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  &__input:last-of-type {
+    margin-bottom: 0;
+  }
+  &__porcentage-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 375px) {
+  .form {
+    &__porcentage-container {
+      grid-template-columns: repeat(3, minmax(auto, 1fr));
+    }
+  }
+}

@@ -17,25 +17,34 @@ $colors-text: (
   primary-strong-cyan: $color-primary-strong-cyan,
   very-dark-cyan: $color-very-dark-cyan,
   dark-grayish-cyan: $color-dark-grayish-cyan,
+  very-light-grayish-cyan: $color-very-light-grayish-cyan,
 );
 
 /*---------COLORS BACKGROUND-------*/
-$colors-bg: (
+$colors-background: (
   primary-strong-cyan: $color-primary-strong-cyan,
   very-dark-cyan: $color-very-dark-cyan,
   light-grayish-cyan: $color-light-grayish-cyan,
+  white: $color-White,
+  very-light-grayish-cyan: $color-very-light-grayish-cyan,
 );
 
+/*---------COLORS BORDER-------*/
+$colors-border: (
+  primary-strong-cyan: $color-primary-strong-cyan,
+);
 /*---------FONT MALILYS-------*/
 $font-primary: "Space Mono", monospace;
 
 /*---------FONT SIZES-------*/
 $font-sizes: (
+  x-small: 12px,
+  normal: 18px,
   big: 24px,
 );
 
 /*---------FONT WEIGHTS-------*/
-$font-weights: (
+$fonts-weight: (
   bold: 700,
 );
 

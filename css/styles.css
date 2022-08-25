@@ -4,7 +4,180 @@
 /*---------DEFINICION DE COLORES-------*/
 /*---------COLORS TEXT-------*/
 /*---------COLORS BACKGROUND-------*/
+/*---------COLORS BORDER-------*/
 /*---------FONT MALILYS-------*/
 /*---------FONT SIZES-------*/
 /*---------FONT WEIGHTS-------*/
 /*---------MEDIA QUERYS-------*/
+/*********************************\
+        $MIXINS
+\*********************************/
+/*********************************\
+        $FUNCTIONS
+\*********************************/
+/*********************************\
+        $RESETS
+\*********************************/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+picture {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*********************************\
+        $CALCULATORS
+\*********************************/
+.calculator {
+  min-width: 320px;
+  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(230px, 1fr);
+  grid-template-columns: repeat(1, minmax(230px, 1fr));
+  gap: 28px;
+  padding: 32px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 16px;
+}
+
+@media (min-width: 550px) {
+  .calculator {
+    -ms-grid-columns: (minmax(100px, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+/*********************************\
+        $BOTONES
+\*********************************/
+.btn {
+  padding: 6px 0;
+  border: none;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn--porcentage {
+  color: hsl(189deg, 41%, 97%);
+  background-color: hsl(183deg, 100%, 15%);
+}
+.btn--custom {
+  color: hsl(186deg, 14%, 43%);
+  background-color: hsl(189deg, 41%, 97%);
+}
+
+/*********************************\
+        $FORMS
+\*********************************/
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form__label {
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(186deg, 14%, 43%);
+}
+.form__input-container {
+  position: relative;
+  margin-bottom: 24px;
+}
+.form__input-container:last-of-type {
+  margin-bottom: 0;
+}
+.form__input-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 7px;
+  height: 12px;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+.form__input-container--dollar::before {
+  background-image: url(../../assets/icons/icon-dollar.svg);
+}
+.form__input-container--clock::before {
+  width: 12px;
+  height: 12px;
+  font-weight: 700;
+  background-image: url(../../assets/icons/relog.svg);
+  opacity: 0.4;
+}
+.form__input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  color: hsl(183deg, 100%, 15%);
+  outline-color: hsl(172deg, 67%, 45%);
+  background-color: hsl(189deg, 41%, 97%);
+  cursor: pointer;
+  border-radius: 6px;
+}
+.form__input:last-of-type {
+  margin-bottom: 0;
+}
+.form__porcentage-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto, 1fr) 12px minmax(auto, 1fr);
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 375px) {
+  .form__porcentage-container {
+    -ms-grid-columns: (minmax(auto, 1fr))[3];
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+  }
+}
+/*********************************\
+        $MAINS
+\*********************************/
+.main {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: hsl(185deg, 41%, 84%);
+}

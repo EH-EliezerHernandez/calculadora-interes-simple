@@ -1,0 +1,9 @@
+/*********************************\
+        $MAINS
+\*********************************/
+.main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: selecColorBg(light-grayish-cyan);
+}
