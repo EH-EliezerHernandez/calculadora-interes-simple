@@ -11,9 +11,11 @@
   &--reset {
     font-size: selecFontSize(small);
     text-transform: uppercase;
+    color: selecColorText(very-dark-cyan);
+    background-color: selecColorBg(primary-strong-cyan);
   }
-  &--inactive {
+  /*  &--inactive {
     color: selecColorText(very-dark-cyan);
     background-color: rgba(selecColorBg(primary-strong-cyan), 0.2);
-  }
+  } */
 }

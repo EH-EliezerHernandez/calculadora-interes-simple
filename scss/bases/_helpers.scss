@@ -1,8 +1,14 @@
 /*********************************\
-        $VARIABLES
+        $HELPERS
 \*********************************/
 
-.active {
+.btn.active {
   color: selecColorText(very-dark-cyan);
   background-color: selecColorBg(primary-strong-cyan);
+}
+
+.btn.inactive {
+  color: selecColorText(very-dark-cyan);
+  background-color: rgba(selecColorBg(primary-strong-cyan), 0.2);
+  cursor: not-allowed;
 }

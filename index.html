@@ -20,16 +20,16 @@
             <form action="" class="form">
                 <label for="inputCapital" class="form__label form__label--capital">Capital</label>
                 <div class="form__input-container form__input-container--dollar">
-                    <input type="number" class="form__input form__input--capital" id="inputCapital" placeholder="0">
+                    <input type="text" class="form__input form__input--capital" id="inputCapital" placeholder="0">
                 </div>
                 <fieldset>
                     <legend class="form__label form__label--percentage">Selecciona % de interes</legend>
-                    <div class=" form__porcentage-container">
-                        <button type="button" class="btn btn--porcentage" id="btnPorcentXSmall">5%</button>
-                        <button type="button" class="btn btn--porcentage" id="btnPorcentSmall">10%</button>
-                        <button type="button" class="btn btn--porcentage" id="btnPorcentNormal">15%</button>
-                        <button type="button" class="btn btn--porcentage" id="btnPorcentBig">25%</button>
-                        <button type="button" class="btn btn--porcentage" id="btnPorcentXBig">50%</button>
+                    <div class=" form__porcentage-container" id="porcentageContainer">
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentXSmall" value="5">5%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentSmall" value="10">10%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentNormal" value="15">15%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentBig" value="25">25%</button>
+                        <button type="button" class="btn btn--porcentage" id="btnPorcentXBig" value="50">50%</button>
                         <input type="number" class="form__input form__input--custom" id="inputCustom"
                             placeholder="Custom">
                     </div>
@@ -46,10 +46,11 @@
                     <span class="result__label">Total a pagar</span>
                     <span class="result__monto" id="resultMontoTotal">$0.00</span>
                 </div>
-                <button class="btn btn--reset btn--inactive">Reset</button>
+                <button type="button" class="btn btn--reset inactive" id="btnReset">Reset</button>
             </div>
         </div>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

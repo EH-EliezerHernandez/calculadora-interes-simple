@@ -63,6 +63,20 @@ fieldset {
 }
 
 /*********************************\
+        $HELPERS
+\*********************************/
+.btn.active {
+  color: hsl(183deg, 100%, 15%);
+  background-color: hsl(172deg, 67%, 45%);
+}
+
+.btn.inactive {
+  color: hsl(183deg, 100%, 15%);
+  background-color: rgba(38, 192, 171, 0.2);
+  cursor: not-allowed;
+}
+
+/*********************************\
         $CALCULATORS
 \*********************************/
 .calculator {
@@ -77,7 +91,7 @@ fieldset {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 16px;
 }
-@media (min-width: ) {
+@media (min-width: 550px) {
   .calculator {
     -ms-grid-columns: (minmax(100px, 1fr))[2];
     grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -94,6 +108,10 @@ fieldset {
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
+  /*  &--inactive {
+    color: selecColorText(very-dark-cyan);
+    background-color: rgba(selecColorBg(primary-strong-cyan), 0.2);
+  } */
 }
 .btn--porcentage {
   color: hsl(189deg, 41%, 97%);
@@ -102,10 +120,8 @@ fieldset {
 .btn--reset {
   font-size: 1.4rem;
   text-transform: uppercase;
-}
-.btn--inactive {
   color: hsl(183deg, 100%, 15%);
-  background-color: rgba(38, 192, 171, 0.2);
+  background-color: hsl(172deg, 67%, 45%);
 }
 
 /*********************************\

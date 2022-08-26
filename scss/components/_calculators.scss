@@ -10,7 +10,7 @@
   padding: 32px;
   background-color: selecColorBg(white);
   border-radius: 16px;
-  @include media(tablet) {
+  @include media(table) {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 }
