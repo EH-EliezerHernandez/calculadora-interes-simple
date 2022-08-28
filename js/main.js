@@ -33,13 +33,7 @@ $inputCustom.addEventListener("input", (evt) => {
   realizarCalculos();
 });
 
-$btnReset.addEventListener("click", () => {
-  resetCampos();
-  addDefaultPlaceholder($inputCustom);
-  removeAllActive();
-  addInactiveState($btnReset);
-  resetResults();
-});
+$btnReset.addEventListener("click", resetCalculator);
 
 /* $inputCustom.addEventListener("blur", (evt) => {
   const target = evt.target;
@@ -49,22 +43,42 @@ $btnReset.addEventListener("click", () => {
 
 /* -----------------functions--------------------- */
 
+function addStylesInactiveState($element) {
+  $element.classList.add("inactive");
+}
+
+function addInactiveState($element) {
+  addStylesInactiveState($element);
+  $element.disabled = true;
+}
+
+function removeInactiveState($element) {
+  removeStylesInactiveState($element);
+  $element.disabled = false;
+}
+
+function resetCalculator() {
+  resetCampos();
+  addDefaultPlaceholder($inputCustom);
+  removeAllActive();
+  addInactiveState($btnReset);
+  resetResults();
+}
+
 function resetResults() {
   const $resultInteres = document.querySelector("#resultInteres");
   const $resultTotal = document.querySelector("#resultMontoTotal");
   $resultInteres.innerText = `$0.00`;
   $resultTotal.innerText = `$0.00`;
 }
+
 function resetCampos() {
   $inputCapital.value = "";
   $inputTime.value = "";
   $inputCustom.value = "";
 }
 
-function addInactiveState($element) {
-  $element.classList.add("inactive");
-}
-function removeInactiveState($element) {
+function removeStylesInactiveState($element) {
   $element.classList.remove("inactive");
 }
 
@@ -87,6 +101,7 @@ function activeBtn($btn) {
   removeAllActive();
   $btn.classList.add("active");
 }
+
 function validarIsNumber(num) {
   return !isNaN(num);
 }
@@ -207,8 +222,8 @@ function renderResult({ interes, totalPagar }) {
 }
 
 function realizarCalculos() {
+  addInactiveState($btnReset);
   try {
-    addInactiveState($btnReset);
     const objData = capturarDatos();
     removeInactiveState($btnReset);
     const objResult = {};
